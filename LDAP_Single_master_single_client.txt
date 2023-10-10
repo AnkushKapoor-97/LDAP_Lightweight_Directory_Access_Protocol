@@ -38,10 +38,10 @@ My Hash ---> {SSHA}USvNbWRHjkyfKHNgDZXWAHDgNKHQ9C5X
 # vi chrootpw.ldif
 
  >>	specify the password generated above for "olcRootPW" section
-	dn: olcDatabase={0}config,cn=config
-	changetype: modify
-	add: olcRootPW
-	olcRootPW: {SSHA}xxxxxxxxxxxxxxxxxxxxxxxx
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+add: olcRootPW
+olcRootPW: {SSHA}xxxxxxxxxxxxxxxxxxxxxxxx
 
 # ldapadd -Y EXTERNAL -H ldapi:/// -f chrootpw.ldif
 
